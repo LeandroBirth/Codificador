@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+    
+</head>
+
+<body class="body">
+    <main class="mainbody">
+        <header class="logo">
+        
+            <a class="logo__img"><img src="./assets/Logo.svg"></a>
+        
+        </header>
+        <section class="home">
+           
+            <section class="home__page">
+                <input type= "text" id= "textInput" class="home__page__inserttext" placeholder="Digite seu texto aqui">
+                    <h1 class="warning"><img src="./assets/bi_exclamation-circle-fill.png">Apenas letras minúsculas e sem acento.</h1>
+                    <div class="home__page__buttons">
+                        <button onclick="criptografar()" class="container_botao1" href="Criptografar.html">Criptografar</button>
+                        <button onclick="descriptografar()" class="container_botao2" href="Descriptografar.html">Descriptografar</button>
+                    </div>
+            </section>
+            <section id=box class="home__page__box">
+                <a class="home__page__box__img"> <img src="./assets/High quality products 1 1.png"> </a>
+                <p class="home__page__box__text"> <strong> Nenhuma mensagem encontrada</strong> 
+                <p class="home__page__box__text2"> Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <div id="outputText" class="button_copy hidden">     
+                </div>                
+                <div id="copiarBotao" class="copiar__container hidden">
+                    <button onclick="copiar()" class="container_botao_cripto" href="./codigo.js">Copiar</button>
+                </div>           
+            </section>
+            
+        </main>   
+    
+    <script src = "./codigo.js" ></script> 
+           
+    <footer class="footer">
+        <p><strong>Criado por:</strong> Leandro Birth, 2024</p>
+    
+    </style>
+    </footer>
+    </main>
+</body>
+
+
+</html>
