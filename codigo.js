@@ -1,4 +1,25 @@
 
+function setLanguage(lang) {
+  
+    localStorage.setItem('language', lang);
+    if (lang === 'pt') {
+        window.location.href = 'index-pt.html'; 
+    } else if (lang === 'en') {
+        window.location.href = 'index-en.html';
+    }
+}
+
+window.onload = function() {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+        if (savedLanguage === 'pt') {
+            window.location.href = 'index-pt.html';
+        } else if (savedLanguage === 'en') {
+            window.location.href = 'index-en.html';
+        }
+    }
+};
+
 function criptografar() {
     const text = document.getElementById('textInput').value;
     const shift = 3;
@@ -54,6 +75,7 @@ function copiar()  {
     tempTextArea.select();
     document.execCommand('copy');
     document.body.removeChild(tempTextArea);
-    alert('Texto copiado para a área de transferência!');
+    
 }
    
+
